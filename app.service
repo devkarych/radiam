@@ -1,11 +1,11 @@
 [Unit]
-Description=
+Description=Telegram Bot [@RadiamBot]
 After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=path/to/root/of/project
-ExecStart=<...>/venv/bin/python .
+WorkingDirectory=/home/www/code/radiam/
+ExecStart=/home/www/code/radiam/venv/bin/python .
 Restart=always
 
 [Install]

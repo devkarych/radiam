@@ -12,13 +12,3 @@ class ResizedReplyKeyboard(ReplyKeyboardMarkup):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.resize_keyboard = True
-
-
-# Customize your keyboard here
-default_menu = ResizedReplyKeyboard(
-    keyboard=[
-        [
-            KeyboardButton(reply.some_text)
-        ],
-    ]
-)
