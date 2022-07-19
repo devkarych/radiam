@@ -1,9 +1,11 @@
+import logging
+
 from pytube import YouTube
 
 from app.exceptions.load_api import LoadError
 from app.services.api.base import AbstractLoader, Audio
 from app.settings.paths import LOADED_CACHE_DIR
-from pytube.exceptions import RegexMatchError
+from pytube.exceptions import RegexMatchError, VideoUnavailable
 
 
 class YouTubeLoader(AbstractLoader):
@@ -22,7 +24,11 @@ class YouTubeLoader(AbstractLoader):
                 file_path=self.get_dst_path(user_id)
             )
 
-        except RegexMatchError:
+        except (RegexMatchError, VideoUnavailable):
+            raise LoadError
+
+        except Exception as e:
+            logging.error(e)
             raise LoadError
 
     def get_dst_path(self, user_id: int) -> path:
