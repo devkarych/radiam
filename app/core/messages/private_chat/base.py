@@ -8,5 +8,10 @@ def welcome(user_firstname: str) -> str:
     """
 
     return bold(f'Hello, {user_firstname}!') + \
-           f"\n\nThis is {link(title='Aioplate', url='https://github.com/devkarych/aioplate')}." \
-           f"\nAuthor: @karych."
+           f"\n\nThis is {link(title='Radiam', url='https://github.com/devkarych/radiam')}." \
+           f"\nAuthor: @karych.\n\n" \
+           f"<i>Send a url to chat and I will load file from target platform. Now, supports only YouTube.</i>"
+
+
+load_error = "<b>File can't be loaded.</b>\nInvalid url or something went wrong."
+loading_started = "Loading started!"

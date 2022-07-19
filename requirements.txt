@@ -4,3 +4,4 @@ sqlalchemy==1.4.39
 alembic==1.8.1
 tzlocal==4.2
 pydantic==1.9.1
+pytube==12.1.0
