@@ -10,6 +10,7 @@ class Bot:
     """Bot config"""
     token: str
     parse_mode: str
+    host_url: str
 
 
 @dataclass
@@ -68,7 +69,8 @@ def load_config() -> Config:
     return Config(
         bot=Bot(
             token=bot["token"],
-            parse_mode=get_parse_mode(bot_section=bot)
+            parse_mode=get_parse_mode(bot_section=bot),
+            host_url=bot["host_url"]
         ),
         db=DB(
             host=db["host"],

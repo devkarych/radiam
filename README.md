@@ -2,7 +2,7 @@
 
 ## App description
 
-Telegram Bot for loading audio & video content from different 
+Telegram Bot for loading audio & video content from different
 services.
 
 ## Stack
