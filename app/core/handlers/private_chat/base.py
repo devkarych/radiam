@@ -34,9 +34,7 @@ async def load_content(m: types.Message):
     await m.answer_chat_action(ChatActions.RECORD_AUDIO)
 
     try:
-
         audio: Audio = yt_loader.load(user_id=m.from_user.id)
-
         await m.answer_audio(InputFile(audio.file_path), caption="@RadiamBot", title=audio.file_name)
         yt_loader.clear_cache(user_id=m.from_user.id)
 
