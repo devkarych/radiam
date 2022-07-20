@@ -1,6 +1,4 @@
-from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
-
-from app.core.navigations import reply
+from aiogram.types import ReplyKeyboardMarkup
 
 
 class ResizedReplyKeyboard(ReplyKeyboardMarkup):

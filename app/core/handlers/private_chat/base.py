@@ -2,7 +2,6 @@ from aiogram import types, Dispatcher
 from aiogram.dispatcher import FSMContext
 from aiogram.types import ChatType, InputFile, ChatActions
 
-from app.core.keyboards import reply
 from app.core.messages.private_chat import base as msgs
 from app.core.middlewares.throttling import throttle
 from app.core.navigations.command import Commands
@@ -28,7 +27,6 @@ async def cmd_start(m: types.Message, state: FSMContext):
 
 @throttle(limit=4)
 async def load_content(m: types.Message):
-
     yt_loader = YouTubeLoader(url=m.text)
     await m.reply(msgs.loading_started)
     await m.answer_chat_action(ChatActions.RECORD_AUDIO)
