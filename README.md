@@ -20,7 +20,3 @@ Check it in DOCS.md
 ## Links
 
 Bot in Telegram: https://t.me/RadiamBot
-
-## Credits
-
-- **App template: <a href="https://github.com/devkarych">Karych</a>.**
